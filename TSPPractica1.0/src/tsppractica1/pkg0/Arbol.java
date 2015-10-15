@@ -6,10 +6,6 @@
 
 package tsppractica1.pkg0;
 
-import java.io.*;
-import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author RamonGuerrero
@@ -103,7 +99,7 @@ public class Arbol {
           int comparador;
           while(aux!=null){
               comparador=codop.compareTo(aux.codop);
-              if (comparador == 0){
+              if (codop.equalsIgnoreCase(aux.codop)){
                   contieneOperandos=aux.porCalcular;
                   auxCadena=codop;
                 while(aux!=null){ //en este ciclo obtenemos los modos de direccionamiento
